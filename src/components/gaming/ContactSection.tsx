@@ -271,8 +271,10 @@ export const ContactSection = () => {
                   Download complete player profile including skills, missions,
                   and achievements.
                 </p>
-                <motion.button
-                  className="btn-gaming w-full"
+                <motion.a
+                  href="/HarshkumarPatel_Resume.pdf"
+                  download
+                  className="btn-gaming w-full inline-block text-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() =>
@@ -286,7 +288,7 @@ export const ContactSection = () => {
                     <Download size={16} />
                     DOWNLOAD RESUME
                   </span>
-                </motion.button>
+                </motion.a>
               </div>
 
               {/* Social Links */}
@@ -296,7 +298,7 @@ export const ContactSection = () => {
                 </h3>
                 <div className="space-y-3 sm:space-y-4">
                   <motion.a
-                    href="mailto:harshkumar@example.com"
+                    href="mailto:harsh.p21@outlook.com"
                     className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
                     whileHover={{ x: 5 }}
                   >
@@ -308,13 +310,13 @@ export const ContactSection = () => {
                         Email
                       </span>
                       <span className="text-xs text-muted-foreground">
-                        harshkumar@example.com
+                        harsh.p21@outlook.com
                       </span>
                     </div>
                   </motion.a>
 
                   <motion.a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/harshkumar-patel-pursuing-mca-at-parul-university-a3607926b/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
@@ -334,7 +336,7 @@ export const ContactSection = () => {
                   </motion.a>
 
                   <motion.a
-                    href="https://github.com"
+                    href="https://github.com/harshpatel-27"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"

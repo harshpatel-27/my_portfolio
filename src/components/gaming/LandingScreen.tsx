@@ -22,6 +22,7 @@ export const LandingScreen = ({ onStart }: LandingScreenProps) => {
 
     setTimeout(() => {
       sounds.background.play();
+      window.dispatchEvent(new Event("music-started"));
     }, 3000);
 
     setTimeout(onStart, 800);
