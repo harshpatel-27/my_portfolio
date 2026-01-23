@@ -14,7 +14,7 @@ export const Footer = () => {
           >
             <div className="w-7 h-7 sm:w-8 sm:h-8 neon-border rounded-lg flex items-center justify-center">
               <span className="font-display font-bold text-primary text-xs sm:text-sm">
-                HP
+                <img src="/profile_harsh.png" alt="" />
               </span>
             </div>
             <span className="font-display text-xs sm:text-sm text-muted-foreground">
@@ -29,7 +29,10 @@ export const Footer = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            © 2024 HARSHKUMAR PATEL // ALL RIGHTS RESERVED
+            <span className="font-display text-xs sm:text-sm text-muted-foreground">
+              ©
+            </span>{" "}
+            {new Date().getFullYear()} HARSHKUMAR PATEL // ALL RIGHTS RESERVED
           </motion.p>
 
           {/* Version (optional) */}

@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useCallback } from "react";
 import { GlitchText } from "./GlitchText";
 import { ParticleBackground } from "./ParticleBackground";
+import { sounds } from "../../lib/sound";
 
 interface LandingScreenProps {
   onStart: () => void;
@@ -18,6 +19,12 @@ export const LandingScreen = ({ onStart }: LandingScreenProps) => {
 
   const handleStart = useCallback(() => {
     setIsExiting(true);
+
+    setTimeout(() => {
+      sounds.background.play();
+      window.dispatchEvent(new Event("music-started"));
+    }, 3000);
+
     setTimeout(onStart, 800);
   }, [onStart]);
 

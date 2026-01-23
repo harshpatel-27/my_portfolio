@@ -11,6 +11,7 @@ import {
   Trophy,
   Mail,
 } from "lucide-react";
+// import { MusicDisc } from "./MusicDisc";
 
 const navItems = [
   { id: "profile", label: "PROFILE", icon: User },
@@ -89,6 +90,7 @@ export const Navigation = () => {
             </motion.div>
 
             {/* Nav Items */}
+            {/* Nav Items + Music */}
             <div className="flex items-center gap-1">
               {navItems.map((item) => {
                 const Icon = item.icon;
@@ -115,9 +117,7 @@ export const Navigation = () => {
                       <motion.div
                         className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
                         layoutId="activeNav"
-                        style={{
-                          boxShadow: "0 0 10px hsl(185 100% 50%)",
-                        }}
+                        style={{ boxShadow: "0 0 10px hsl(185 100% 50%)" }}
                       />
                     )}
                   </motion.button>
