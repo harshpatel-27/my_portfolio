@@ -1,27 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import {
-  Menu,
-  X,
-  User,
-  Crosshair,
-  Briefcase,
-  Workflow,
-  Wrench,
-  Trophy,
-  Mail,
-} from "lucide-react";
-// import { MusicDisc } from "./MusicDisc";
-
-const navItems = [
-  { id: "profile", label: "PROFILE", icon: User },
-  { id: "skills", label: "LOADOUT", icon: Crosshair },
-  { id: "missions", label: "MISSIONS", icon: Briefcase },
-  { id: "workflow", label: "PIPELINE", icon: Workflow },
-  { id: "tools", label: "ARSENAL", icon: Wrench },
-  { id: "achievements", label: "ACHIEVEMENTS", icon: Trophy },
-  { id: "contact", label: "INVITE", icon: Mail },
-];
+import { X, Menu } from "lucide-react";
+import { navItems } from "@/libs/utils";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

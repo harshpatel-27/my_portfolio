@@ -1,59 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-
-const tools = [
-  {
-    name: "JIRA",
-    category: "Bug Tracking",
-    description: "Issue tracking and project management",
-  },
-  {
-    name: "Bugzilla",
-    category: "Bug Tracking",
-    description: "Open-source bug tracking system",
-  },
-  {
-    name: "TestRail",
-    category: "Test Management",
-    description: "Test case management platform",
-  },
-  {
-    name: "Trello",
-    category: "Project Management",
-    description: "Visual project organization",
-  },
-  {
-    name: "Unity Profiler",
-    category: "Performance",
-    description: "Game performance analysis tool",
-  },
-  {
-    name: "Unreal Tools",
-    category: "Development",
-    description: "Unreal Engine debugging suite",
-  },
-  {
-    name: "Steam",
-    category: "Platform",
-    description: "PC gaming distribution platform",
-  },
-  {
-    name: "Epic Games",
-    category: "Platform",
-    description: "Game store and launcher",
-  },
-  {
-    name: "OBS Studio",
-    category: "Recording",
-    description: "Screen capture and streaming",
-  },
-  {
-    name: "Google Docs",
-    category: "Documentation",
-    description: "Collaborative document editing",
-  },
-];
+import { tools } from "../../libs/utils";
 
 const ToolIcon = ({ name }: { name: string }) => {
   const initial = name.charAt(0);

@@ -2,45 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { SkillCard } from "./SkillCard";
-import { Brain, Wrench, Monitor, Code, FileText } from "lucide-react";
-
-const skills = [
-  {
-    icon: Brain,
-    title: "QA Concepts",
-    description: "Core testing methodologies and frameworks",
-    items: ["GDLC", "GTLC", "Agile/Scrum", "E2E Testing"],
-    color: "cyan" as const,
-  },
-  {
-    icon: Wrench,
-    title: "Testing Tools",
-    description: "Industry-standard QA and tracking tools",
-    items: ["JIRA", "Bugzilla", "TestRail", "Trello"],
-    color: "green" as const,
-  },
-  {
-    icon: Monitor,
-    title: "Platforms",
-    description: "Gaming platforms and distributions",
-    items: ["Steam", "Epic Games", "Unity", "Unreal"],
-    color: "purple" as const,
-  },
-  {
-    icon: Code,
-    title: "Programming",
-    description: "Development languages for automation",
-    items: ["C", "C++"],
-    color: "orange" as const,
-  },
-  {
-    icon: FileText,
-    title: "Documentation",
-    description: "Recording and reporting tools",
-    items: ["OBS Studio", "Screen Recorder", "Google Docs"],
-    color: "cyan" as const,
-  },
-];
+import { coreSkills, skills } from "../../libs/utils";
 
 export const SkillsSection = () => {
   const ref = useRef(null);
@@ -99,29 +61,46 @@ export const SkillsSection = () => {
             </h4>
 
             <div className="flex flex-wrap gap-2 sm:gap-3">
-              {[
-                "Gameplay Test Coverage",
-                "Feature-to-Test Case Traceability",
-                "Regression Testing",
-                "Cross-Platform Testing",
-                "Performance Profiling",
-                "Exploratory Testing",
-                "Usability Feedback",
-                "Bug Reproduction",
-              ].map((skill, index) => (
+              {coreSkills.map((skill, index) => (
                 <motion.span
                   key={skill}
                   className="
-                px-3 py-1.5 sm:px-4 sm:py-2
-                rounded-lg
-                bg-muted/50
-                text-foreground
-                text-xs sm:text-sm
-                font-mono
-                border border-border
-                hover:border-primary hover:text-primary
-                transition-all duration-300
-              "
+        px-3 py-1.5 sm:px-4 sm:py-2
+        rounded-lg
+        bg-muted/50
+        text-foreground
+        text-xs sm:text-sm
+        font-mono
+        border border-border
+        hover:border-primary hover:text-primary
+        transition-all duration-300
+      "
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8 + index * 0.05 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-2 sm:gap-3">
+              {coreSkills.map((skill, index) => (
+                <motion.span
+                  key={skill}
+                  className="
+        px-3 py-1.5 sm:px-4 sm:py-2
+        rounded-lg
+        bg-muted/50
+        text-foreground
+        text-xs sm:text-sm
+        font-mono
+        border border-border
+        hover:border-primary hover:text-primary
+        transition-all duration-300
+      "
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
