@@ -1,53 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-import {
-  Gamepad2,
-  Bug,
-  Camera,
-  FileText,
-  RotateCcw,
-  CheckCircle,
-} from "lucide-react";
-
-const workflowSteps = [
-  {
-    icon: Gamepad2,
-    title: "GAMEPLAY",
-    description: "Execute test cases and exploratory testing",
-    color: "primary",
-  },
-  {
-    icon: Bug,
-    title: "BUG FOUND",
-    description: "Identify and reproduce the issue",
-    color: "destructive",
-  },
-  {
-    icon: Camera,
-    title: "EVIDENCE",
-    description: "Capture screenshots and video proof",
-    color: "accent",
-  },
-  {
-    icon: FileText,
-    title: "REPORT",
-    description: "Document in bug tracking system",
-    color: "neon-orange",
-  },
-  {
-    icon: RotateCcw,
-    title: "RETEST",
-    description: "Verify fix after development",
-    color: "secondary",
-  },
-  {
-    icon: CheckCircle,
-    title: "APPROVED",
-    description: "Confirm resolution and close",
-    color: "secondary",
-  },
-];
+import { workflowSteps } from "../../libs/utils";
 
 export const WorkflowSection = () => {
   const ref = useRef(null);

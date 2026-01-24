@@ -3,19 +3,12 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { StatBar } from "./StatBar";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
-
+import { profileData, stats } from "../../libs/utils";
 import ElectricBorder from "../ElectricBorder";
 
 export const PlayerProfile = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  const stats = [
-    { label: "Bug Detection", value: 92, color: "cyan" as const },
-    { label: "Gameplay Coverage", value: 88, color: "green" as const },
-    { label: "Documentation", value: 85, color: "purple" as const },
-    { label: "Tool Expertise", value: 90, color: "orange" as const },
-  ];
 
   return (
     <section id="profile" className="min-h-screen py-20 sm:py-32 relative">
@@ -74,7 +67,11 @@ export const PlayerProfile = () => {
                     whileHover={{ scale: 1.05 }}
                   >
                     <span className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-primary">
-                      <img src="/profile_harsh1.png" alt="" />
+                      <img
+                        src={profileData.player.avatar}
+                        alt={profileData.player.name}
+                        className="w-full h-full object-cover"
+                      />
                     </span>
 
                     {/* Scanline effect */}
@@ -93,18 +90,19 @@ export const PlayerProfile = () => {
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
                     <span className="text-[10px] sm:text-xs text-primary font-mono">
-                      LVL 27
+                      LVL {profileData.player.level}
                     </span>
                     <span className="text-xs text-muted-foreground">•</span>
                     <span className="text-[10px] sm:text-xs text-secondary font-mono">
-                      ONLINE
+                      {" "}
+                      {profileData.player.status}
                     </span>
                   </div>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mb-1 sm:mb-2">
-                    HARSHKUMAR PATEL
+                    {profileData.player.name}
                   </h3>
                   <p className="text-primary font-mono text-xs sm:text-sm">
-                    GAME QA TESTER / GAMEPLAY TESTER
+                    {profileData.player.role}
                   </p>
                 </div>
               </div>
@@ -115,62 +113,40 @@ export const PlayerProfile = () => {
                   // BIO
                 </h4>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Aspiring MCA student with strong foundations in game testing,
-                  defect management, and automation basics. Passionate about
-                  ensuring game quality through structured gameplay testing and
-                  bug reporting.
+                  {profileData.bio.description}
                 </p>
               </div>
 
               {/* Education */}
-              <div className="space-y-4">
-                <h4 className="text-[10px] sm:text-xs text-muted-foreground font-mono tracking-wider">
-                  // EDUCATION
-                </h4>
-
-                <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
+              {profileData.education.map((edu) => (
+                <div
+                  key={edu.degree}
+                  className="flex items-start gap-3 p-4 rounded-lg bg-muted/30"
+                >
                   <GraduationCap
-                    className="text-primary mt-1 shrink-0"
+                    className={`text-${edu.color} mt-1 shrink-0`}
                     size={18}
                   />
                   <div>
-                    <h5 className="font-display font-bold text-foreground">
-                      MCA (Big Data Analytics)
-                    </h5>
+                    <h5 className="font-display font-bold">{edu.degree}</h5>
                     <p className="text-sm text-muted-foreground">
-                      Parul University
+                      {edu.university}
                     </p>
-                    <div className="flex flex-wrap items-center gap-4 mt-2 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1">
-                        <Calendar size={12} /> 2025
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <MapPin size={12} /> Gujarat, India
-                      </span>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
-                  <GraduationCap
-                    className="text-secondary mt-1 shrink-0"
-                    size={18}
-                  />
-                  <div>
-                    <h5 className="font-display font-bold text-foreground">
-                      B.Com
-                    </h5>
-                    <p className="text-sm text-muted-foreground">
-                      South Gujarat University
-                    </p>
                     <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
                       <span className="flex items-center gap-1">
-                        <Calendar size={12} /> 2021
+                        <Calendar size={12} /> {edu.year}
                       </span>
+
+                      {edu.location && (
+                        <span className="flex items-center gap-1">
+                          <MapPin size={12} /> {edu.location}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </motion.div>
 
             {/* Stats Panel */}
@@ -200,41 +176,21 @@ export const PlayerProfile = () => {
 
               {/* Additional stats */}
               <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-8 sm:mt-10">
-                <div className="p-4 rounded-lg bg-muted/30 text-center">
-                  <span className="text-2xl sm:text-3xl font-display font-bold neon-text-cyan">
-                    2+
-                  </span>
-                  <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
-                    MISSIONS COMPLETED
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-lg bg-muted/30 text-center">
-                  <span className="text-2xl sm:text-3xl font-display font-bold neon-text-green">
-                    50+
-                  </span>
-                  <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
-                    BUGS DETECTED
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-lg bg-muted/30 text-center">
-                  <span className="text-2xl sm:text-3xl font-display font-bold neon-text-purple">
-                    3
-                  </span>
-                  <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
-                    CERTIFICATIONS
-                  </p>
-                </div>
-
-                <div className="p-4 rounded-lg bg-muted/30 text-center">
-                  <span className="text-2xl sm:text-3xl font-display font-bold text-neon-orange">
-                    10+
-                  </span>
-                  <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
-                    TOOLS MASTERED
-                  </p>
-                </div>
+                {profileData.statsSummary.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="p-4 rounded-lg bg-muted/30 text-center"
+                  >
+                    <span
+                      className={`text-2xl sm:text-3xl font-display font-bold ${stat.colorClass}`}
+                    >
+                      {stat.value}
+                    </span>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground mt-1">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>
