@@ -4,11 +4,17 @@ import { useRef, useState } from "react";
 import { MissionCard } from "./MissionCard";
 import { MissionModal } from "./MissionModal";
 import { missions, type Mission } from "../../libs/utils";
+import { sounds } from "../../lib/sound";
 
 export const MissionsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedMission, setSelectedMission] = useState<Mission | null>(null);
+
+  const handleSelectMission = (mission: Mission) => {
+    sounds.missionOpen.play();
+    setSelectedMission(mission);
+  };
 
   return (
     <section id="missions" className="min-h-screen py-20 sm:py-32 relative">
@@ -50,7 +56,7 @@ export const MissionsSection = () => {
                 key={mission.id}
                 mission={mission}
                 index={index}
-                onSelect={setSelectedMission}
+                onSelect={handleSelectMission}
               />
             ))}
           </div>

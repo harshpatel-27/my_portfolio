@@ -18,7 +18,10 @@ export const LandingScreen = ({ onStart }: LandingScreenProps) => {
   }, []);
 
   const handleStart = useCallback(() => {
+    if (isExiting) return;
+
     setIsExiting(true);
+    sounds.startButton.play();
 
     setTimeout(() => {
       sounds.background.play();
@@ -26,7 +29,7 @@ export const LandingScreen = ({ onStart }: LandingScreenProps) => {
     }, 3000);
 
     setTimeout(onStart, 800);
-  }, [onStart]);
+  }, [isExiting, onStart]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -182,14 +185,14 @@ export const LandingScreen = ({ onStart }: LandingScreenProps) => {
                         animate={{ opacity: [1, 0.3, 1] }}
                         transition={{ duration: 1, repeat: Infinity }}
                       >
-                        ▶
+                        {"\u25B6"}
                       </motion.span>
                       PRESS ENTER TO START
                       <motion.span
                         animate={{ opacity: [1, 0.3, 1] }}
                         transition={{ duration: 1, repeat: Infinity }}
                       >
-                        ◀
+                        {"\u25C0"}
                       </motion.span>
                     </span>
                   </button>
