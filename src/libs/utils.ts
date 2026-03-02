@@ -195,13 +195,13 @@ export const missions: Mission[] = [
     ],
     bugsFound: [
       "Game freezes when triggering multiple boosters simultaneously",
-  "Progression levels not unlocking after word completion",
-  "Touch input delay on low-end Android devices",
-  "UI misalignment across different screen resolutions",
-  "Ad reward not granted after video completion",
-  "App crashes when switching between themes rapidly",
+      "Progression levels not unlocking after word completion",
+      "Touch input delay on low-end Android devices",
+      "UI misalignment across different screen resolutions",
+      "Ad reward not granted after video completion",
+      "App crashes when switching between themes rapidly",
     ],
-    tools: ["JIRA","Bugzilla","TestRail","APK Editor","Inbuild Screen Recording","Discord"],
+    tools: ["JIRA","Bugzilla","TestRail","APK Editor","Mobile Screen Recording","Discord"],
   },
 {
     id: "fortnite",
@@ -348,6 +348,11 @@ export const tools = [
   },
   {
     name: "Epic Games",
+    category: "Platform",
+    description: "Game store and launcher",
+  },
+  {
+    name: "Play Store",
     category: "Platform",
     description: "Game store and launcher",
   },
