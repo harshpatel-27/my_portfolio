@@ -44,13 +44,13 @@ export const MissionModal = ({
             className="
           fixed z-[100]
           glass-panel rounded-2xl
-          inset-2 sm:inset-4
-           top-[calc(64px+4vh)]
-          md:inset-auto
-          md:top-1/2 md:left-1/2
-          md:-translate-x-1/2 md:-translate-y-1/2
-          md:w-full md:max-w-2xl md:max-h-[80vh]
-          overflow-y-auto
+          left-1/2 -translate-x-1/2
+          w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)]
+          max-w-2xl
+          top-20 sm:top-24
+          bottom-3 sm:bottom-4
+          md:-translate-x-1/2
+          overflow-y-auto overscroll-contain
         "
             initial={{ opacity: 0, scale: 0.9, y: 50 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -109,7 +109,7 @@ export const MissionModal = ({
             </div>
 
             {/* Content */}
-            <div className="p-4 sm:p-6 space-y-5 sm:space-y-6">
+            <div className="p-4 sm:p-6 pb-8 sm:pb-10 space-y-5 sm:space-y-6">
               {/* Objectives */}
               <div>
                 <div className="flex items-center gap-2 mb-2 sm:mb-3">
@@ -207,3 +207,5 @@ export const MissionModal = ({
     </AnimatePresence>
   );
 };
+
+
