@@ -201,7 +201,7 @@ export const missions: Mission[] = [
       "Ad reward not granted after video completion",
       "App crashes when switching between themes rapidly",
     ],
-    tools: ["JIRA","Bugzilla","TestRail","APK Editor","Mobile Screen Recording","Discord"],
+    tools: ["Trello","JIRA","Bugzilla","TestRail","APK Editor","Mobile Screen Recording","Discord"],
   },
 {
     id: "fortnite",
