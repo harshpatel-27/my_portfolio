@@ -48,7 +48,7 @@ export const profileData = {
 
   bio: {
     description:
-      "Aspiring MCA student with strong foundations in game testing, defect management, and automation basics. Passionate about ensuring game quality through structured gameplay testing and bug reporting.",
+      "Professional game tester with hands on experience in game testing focusing on front-end and back-end testing, perform various testing activities and help organization and team to deliver high quality gaming solution. ",
   },
 
   education: [
@@ -61,20 +61,20 @@ export const profileData = {
     },
     {
       degree: "B.Com",
-      university: "South Gujarat University",
+      university: "Veer Narmad South Gujarat University",
       year: "2021",
       color: "secondary",
     },
   ],
-
+  
   statsSummary: [
     {
-      value: "2+",
+      value: "3+",
       label: "MISSIONS COMPLETED",
       colorClass: "neon-text-cyan",
     },
     {
-      value: "50+",
+      value: "70+",
       label: "BUGS DETECTED",
       colorClass: "neon-text-green",
     },
@@ -107,7 +107,7 @@ export const skills = [
     icon: Brain,
     title: "QA Concepts",
     description: "Core testing methodologies and frameworks",
-    items: ["GDLC", "GTLC", "Agile/Scrum", "E2E Testing"],
+    items: ["SDLC","STLC","GDLC", "GTLC", "Agile/Scrum", "E2E Testing"],
     color: "cyan" as const,
   },
   {
@@ -121,7 +121,7 @@ export const skills = [
     icon: Monitor,
     title: "Platforms",
     description: "Gaming platforms and distributions",
-    items: ["Steam", "Epic Games", "Unity", "Unreal"],
+    items: ["Steam", "Epic Games", "Unity", "Unreal","Play Store"],
     color: "purple" as const,
   },
   {
@@ -166,8 +166,44 @@ export interface Mission {
   color: "cyan" | "green";
 }
 
+// project 
+
 export const missions: Mission[] = [
   {
+    id: "HorizonX Playr",
+    title: "Word Sort Game / Zen Word Game",
+    subtitle: "Gameplay & Systems Testing",
+    status: "completed" as const,
+    color: "cyan" as const,
+    objectives: [
+      "Manual gameplay testing across PC, Mobile, and Console platforms",
+      "Functional, smoke, regression, and exploratory testing execution",
+      "Core gameplay mechanics validation including input responsiveness and progression logic",
+      "Bug identification, logging, and lifecycle tracking",
+      "Verification of fixes through retesting and stability validation",
+      "Cross-team collaboration with developers, QA leads, and project managers",
+      "Multi-build testing using APK Editor for recurring and new issues",
+      "Gameplay balance evaluation and usability feedback collection",
+    ],
+    testingScope: [
+      "Movement",
+      "Shooting",
+      "Building",
+      "Inventory",
+      "Matchmaking",
+      "UI/UX",
+    ],
+    bugsFound: [
+      "Game freezes when triggering multiple boosters simultaneously",
+  "Progression levels not unlocking after word completion",
+  "Touch input delay on low-end Android devices",
+  "UI misalignment across different screen resolutions",
+  "Ad reward not granted after video completion",
+  "App crashes when switching between themes rapidly",
+    ],
+    tools: ["JIRA","Bugzilla","TestRail","APK Editor","Inbuild Screen Recording","Discord"],
+  },
+{
     id: "fortnite",
     title: "FORTNITE",
     subtitle: "Gameplay & Systems Testing",
@@ -198,6 +234,7 @@ export const missions: Mission[] = [
     ],
     tools: ["JIRA", "OBS Studio", "Steam", "Discord"],
   },
+
   {
     id: "roblox",
     title: "ROBLOX",
@@ -329,6 +366,28 @@ export const tools = [
 //  Achivements Data
 export const achievements = [
   {
+    id: "istqb",
+    title: "ISTQB CTFL",
+    issuer: "ISTQB",
+    icon: Trophy,
+    color: "primary",
+    rarity: "RARE",
+    progress: 8, // 🔥 in progress
+    unlocked: true, // already unlocked
+  },
+
+    {
+    id: "istqb",
+    title: "ISTQB CT-GaMe",
+    issuer: "ISTQB",
+    icon: Trophy,
+    color: "primary",
+    rarity: "RARE",
+    progress: 0, // 🔥 in progress
+    unlocked: true, // already unlocked
+  },
+
+  {
     id: "agile",
     title: "Agile for Beginners",
     issuer: "Great Learning",
@@ -345,7 +404,7 @@ export const achievements = [
     icon: Award,
     color: "secondary",
     rarity: "EPIC",
-    progress: 69, // 🔒 in progress
+    progress: 100, // 🔒 in progress
     unlocked: false,
   },
   {
@@ -355,7 +414,7 @@ export const achievements = [
     icon: Medal,
     color: "accent",
     rarity: "LEGENDARY",
-    progress: 30, // 🔒 early stage
+    progress: 100, // 🔒 early stage
     unlocked: false,
   },
 ];
