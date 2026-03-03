@@ -3,7 +3,7 @@ import { Howl } from "howler";
 export const sounds = {
   startButton: new Howl({
     src: ["/sounds/start_button.mp3"],
-    volume: 0.6,
+    volume: 0.8,
   }),
 
   missionOpen: new Howl({
