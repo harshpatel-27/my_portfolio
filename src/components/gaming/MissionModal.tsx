@@ -43,13 +43,11 @@ export const MissionModal = ({
           <motion.div
             className="
           fixed z-[100]
-          glass-panel rounded-2xl
-          left-1/2 -translate-x-1/2
-          w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)]
-          max-w-2xl
-          top-20 sm:top-24
-          bottom-3 sm:bottom-4
-          md:-translate-x-1/2
+          glass-panel rounded-xl sm:rounded-2xl
+          inset-x-2 sm:inset-x-4 lg:inset-x-0
+          lg:mx-auto lg:w-full lg:max-w-2xl
+          top-[calc(env(safe-area-inset-top)+4.5rem)] sm:top-24
+          bottom-[calc(env(safe-area-inset-bottom)+0.5rem)] sm:bottom-4
           overflow-y-auto overscroll-contain
         "
             initial={{ opacity: 0, scale: 0.9, y: 50 }}
@@ -63,7 +61,7 @@ export const MissionModal = ({
             sticky top-0
             z-[110]
             bg-card/95 backdrop-blur-sm
-            p-4 sm:p-6
+            p-3 sm:p-6
             border-b border-border
             flex items-start justify-between gap-4
           "
@@ -109,7 +107,7 @@ export const MissionModal = ({
             </div>
 
             {/* Content */}
-            <div className="p-4 sm:p-6 pb-8 sm:pb-10 space-y-5 sm:space-y-6">
+            <div className="p-4 sm:p-6 pb-[calc(env(safe-area-inset-bottom)+2rem)] sm:pb-10 space-y-5 sm:space-y-6">
               {/* Objectives */}
               <div>
                 <div className="flex items-center gap-2 mb-2 sm:mb-3">
