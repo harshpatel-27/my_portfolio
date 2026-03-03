@@ -171,8 +171,8 @@ export interface Mission {
 export const missions: Mission[] = [
   {
     id: "HorizonX Playr",
-    title: "Word Sort Game / Zen Word Game",
-    subtitle: "Gameplay & Systems Testing",
+    title: "HorizonX Playr",
+    subtitle: "Word Tour Jam Game / Zen Word Game",
     status: "completed" as const,
     color: "cyan" as const,
     objectives: [
@@ -186,11 +186,11 @@ export const missions: Mission[] = [
       "Gameplay balance evaluation and usability feedback collection",
     ],
     testingScope: [
-      "Movement",
-      "Shooting",
-      "Building",
-      "Inventory",
-      "Matchmaking",
+      "Word Recognition",
+      "Letter Selection & Input",
+      "Level Progression",
+      "Hint & Booster Systems",      
+      "Timer & Scoring Mechanics",
       "UI/UX",
     ],
     bugsFound: [
@@ -201,7 +201,7 @@ export const missions: Mission[] = [
       "Ad reward not granted after video completion",
       "App crashes when switching between themes rapidly",
     ],
-    tools: ["JIRA","Bugzilla","TestRail","APK Editor","Mobile Screen Recording","Discord"],
+    tools: ["Trello","JIRA","Bugzilla","TestRail","APK Editor","Mobile Screen Recording","Discord"],
   },
 {
     id: "fortnite",

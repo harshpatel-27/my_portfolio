@@ -316,7 +316,7 @@ export const ContactSection = () => {
                   </motion.a>
 
                   <motion.a
-                    href="https://www.linkedin.com/in/harshkumar-patel-pursuing-mca-at-parul-university-a3607926b/"
+                    href="https://www.linkedin.com/in/harshkumar-patel-a3607926b/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
