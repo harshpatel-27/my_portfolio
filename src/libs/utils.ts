@@ -49,7 +49,7 @@ export const profileData = {
 
   bio: {
     description:
-      "Professional game tester with hands on experience in game testing focusing on front-end and back-end testing, perform various testing activities and help organization and team to deliver high quality gaming solution. ",
+      "A Game QA Tester with hands-on experience in testing PC and mobile gaming applications. Skilled in validating gameplay frontend, scoring logic, and other game features to delivery qualitative gaming user experience. Proficient in test management activities and experience working in different process methodologies. Self-organized with strong attention to detail, able to collaborate effectively with developers, designers, and QA teams in a fast-paced environment. Have growing mindset and continuous learning thrives toward new trends and technologies in gaming industry. ",
   },
 
   education: [
@@ -377,25 +377,15 @@ export const tools = [
 
 //  Achivements Data
 export const achievements = [
-  {
-    id: "istqb",
-    title: "ISTQB CTFL",
-    issuer: "ISTQB",
-    icon: Trophy,
-    color: "primary",
-    rarity: "RARE",
-    progress: 8, // 🔥 in progress
-    unlocked: true, // already unlocked
-  },
-
+  
     {
-    id: "istqb",
-    title: "ISTQB CT-GaMe",
-    issuer: "ISTQB",
+    id: "claude",
+    title: "Claude 101",
+    issuer: "Anthropic",
     icon: Trophy,
     color: "primary",
     rarity: "RARE",
-    progress: 0, // 🔥 in progress
+    progress: 100, // 🔥 Completed
     unlocked: true, // already unlocked
   },
 
@@ -428,5 +418,15 @@ export const achievements = [
     rarity: "LEGENDARY",
     progress: 100, // 🔒 early stage
     unlocked: false,
+  },
+  {
+    id: "istqb",
+    title: "ISTQB CTFL",
+    issuer: "ISTQB",
+    icon: Trophy,
+    color: "primary",
+    rarity: "RARE",
+    progress: 8, // 🔥 in progress
+    unlocked: true, // already unlocked
   },
 ];
