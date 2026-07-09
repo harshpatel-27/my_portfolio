@@ -81,7 +81,7 @@ export const profileData = {
       colorClass: "neon-text-green",
     },
     {
-      value: "3",
+      value: "4",
       label: "CERTIFICATIONS",
       colorClass: "neon-text-purple",
     },
