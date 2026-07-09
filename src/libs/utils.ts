@@ -23,6 +23,7 @@ import {
   Wrench,
   Mail,
 } from "lucide-react";
+import { styleText } from "util";
 
 //  nav link
 
@@ -47,7 +48,7 @@ export const profileData = {
     avatar: "/profile_harsh1.png",
   },
 
-  bio: {
+  bio: { 
     description:
       "A Game QA Tester with hands-on experience in testing PC and mobile gaming applications. Skilled in validating gameplay frontend, scoring logic, and other game features to delivery qualitative gaming user experience. Proficient in test management activities and experience working in different process methodologies. Self-organized with strong attention to detail, able to collaborate effectively with developers, designers, and QA teams in a fast-paced environment. Have growing mindset and continuous learning thrives toward new trends and technologies in gaming industry. ",
   },
