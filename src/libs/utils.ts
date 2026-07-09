@@ -55,16 +55,16 @@ export const profileData = {
 
   education: [
     {
-      degree: "MCA (Big Data Analytics)",
+      degree: "MCA - Big Data Analytics",
       university: "Parul University",
-      year: "2026",
+      year: "2024-2026",
       location: "Gujarat, India",
       color: "primary",
     },
     {
       degree: "B.Com",
       university: "Veer Narmad South Gujarat University",
-      year: "2021",
+      year: "2019-2021",
       color: "secondary",
     },
   ],
