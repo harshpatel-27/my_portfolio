@@ -173,7 +173,7 @@ export const missions: Mission[] = [
   {
     id: "HorizonX Playr",
     title: "HorizonX Playr",
-    subtitle: "Word Tour Jam Game / Zen Word Game",
+    subtitle: "GTA V Roleplay & GTA V Online Testing",
     status: "completed" as const,
     color: "cyan" as const,
     objectives: [
