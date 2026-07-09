@@ -57,7 +57,7 @@ export const profileData = {
     {
       degree: "MCA (Big Data Analytics)",
       university: "Parul University",
-      year: "2025",
+      year: "2026",
       location: "Gujarat, India",
       color: "primary",
     },
