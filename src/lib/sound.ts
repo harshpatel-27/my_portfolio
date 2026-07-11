@@ -8,7 +8,7 @@ export const sounds = {
 
   missionOpen: new Howl({
     src: ["/sounds/mission_sound.mp3"],
-    volume: 0.6,
+    volume: 0.3,
   }),
 
   background: new Howl({
