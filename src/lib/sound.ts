@@ -14,6 +14,6 @@ export const sounds = {
   background: new Howl({
     src: ["/sounds/background.mp3"],
     // loop: true, // non-stop
-    volume: 0.05, // soft background
+    volume: 0.10, // soft background
   }),
 };
