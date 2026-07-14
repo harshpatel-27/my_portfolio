@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, Download, Mail, Linkedin, Github } from "lucide-react";
+import { Send, Download, Mail, Linkedin, Github, Twitter } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
 
@@ -354,6 +354,28 @@ export const ContactSection = () => {
                       </span>
                     </div>
                   </motion.a>
+
+                  <motion.a
+                    href="https://x.com/harshu_27"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
+                    whileHover={{ x: 5 }}
+                  >
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-foreground/10 flex items-center justify-center">
+                      <Twitter className="text-foreground" size={18} />
+                    </div>
+                    <div>
+                      <span className="text-foreground font-mono text-sm block">
+                        Twitter
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        Social Media
+                      </span>
+                    </div>
+                  </motion.a>
+
+                  
                 </div>
               </div>
             </motion.div>
