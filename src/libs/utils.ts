@@ -173,7 +173,7 @@ export interface Mission {
 export const missions: Mission[] = [
   
   // horizon game show here
-{
+{  
     id: "fortnite",
     title: "FORTNITE",
     subtitle: "Gameplay & Systems Testing",
