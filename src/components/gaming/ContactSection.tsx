@@ -355,7 +355,7 @@ export const ContactSection = () => {
                     </div>
                   </motion.a>
 
-                  <motion.a
+                  {/* <motion.a
                     href="https://x.com/harshu_27"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -373,7 +373,7 @@ export const ContactSection = () => {
                         Social Media
                       </span>
                     </div>
-                  </motion.a>
+                  </motion.a> */}
 
                   
                 </div>
