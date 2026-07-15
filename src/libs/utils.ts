@@ -172,8 +172,8 @@ export interface Mission {
 
 export const missions: Mission[] = [
   {
-    id: "FPS Game",
-    title: "FPS Game Testing",
+    id: "HorizonX Playr",
+    title: "HorizonX Playr",
     subtitle: "GTA V Roleplay, GTA V Online Testing & Mobile Game Testing",
     status: "completed" as const,
     color: "cyan" as const,
