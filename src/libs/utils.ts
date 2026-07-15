@@ -171,45 +171,8 @@ export interface Mission {
 // project 
 
 export const missions: Mission[] = [
-  // {
-  //   id: "HorizonX Playr",
-  //   title: "HorizonX Playr",
-  //   subtitle: "GTA V Roleplay, GTA V Online Testing & Mobile Game Testing",
-  //   status: "completed" as const,
-  //   color: "cyan" as const,
-  //   objectives: [
-  //     "Tested games like GTA 5, Fortnite, mobile word games, and GTA 5 roleplay servers to ensure a smooth and issue-free user experience.", 
-  //     "Performed gameplay testing, validation testing, mechanics, mission flow, player interaction, server economy, roleplay features, and multiplayer stability testing for Grand Theft Auto 5 Roleplay (GTA 5 RP) and Red Dead Redemption 2 Roleplay (RDR2 RP) community servers.", 
-  //     "Validated game mission checkpoints for GTA 5 online race games, save-load functionality, respawn behavior, custom missions, event triggers, and NPC activities.", 
-  //     "Validated driving mechanics, vehicle handling, and damage models using GDD.", 
-  //     "Installed hardware configurations and tested devices like PS controller, keyboard and mouse input responsiveness for interactive device gameplay experience.", 
-  //     "Performed smoke, functional, UI, and regression testing for features, level progressions, player controls, animations, and UAT testing for overall game flow and smoother gaming UX.", 
-  //     "Tested different screen resolutions, compatibility, aspect ratios, and window modes in all different graphics settings.", 
-  //     "Reported, documented, and tracked bugs in Jira with proper reproduction steps, evidence, priority, and severity.", 
-  //     "Investigated, discussed and reported bugs with details steps to reproduce, actual and expected result and additional details in Jira and manage bug statuses.", 
-  //     "Proficient in the Microsoft Office suite Apps (e.g., Word, PowerPoint, Excel) for testing documentations and artifacts.", 
-  //     "Collaborated with to developers and designers to improve stability, balance, and overall user experience and related issues.", 
-  //     "Managed various gaming and server updates relates testing, estimated QA efforts and prioritization of test execution.",
-  //   ],
-  //   testingScope: [
-  //     "Misson Flow",
-  //     "Server Economy",
-  //     "Level Progression",
-  //     "Save-Load Functionality",      
-  //     "Respwan Behavior",
-  //     "UI/UX",
-  //     "Animations Testing",
-  //   ],
-  //   bugsFound: [
-  //     "The .50 Pistol fires with a suppressed sound while on foot because the suppressor is attached, but after getting into a vehicle, the suppressor is removed from the weapon during drive-by shooting.",
-  //     "Gun skin changes randomly between custom and default during cutscenes, failing to load the correct skin.",
-  //     "Car boosting alarm did not trigger for the police when the player started the car boosting feature in the GTA 5 roleplay server.",
-  //     "Mini game functionality in GTA 5 RP server does not trigger when the player interacts with the mini game object.",
-  //     "After Mini game completion, the player is not rewarded with the correct in-game currency or items.",
-  //     "Player crashes when attempting a wrong hack in the mini-game on the GTA 5 RP server.",
-  //   ],
-  //   tools: ["Trello","JIRA","TestRail","txAdmin","Dolu","OBS Studio","Discord"],
-  // },
+  
+  // horizon game show here
 {
     id: "fortnite",
     title: "FORTNITE",
