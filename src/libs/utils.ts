@@ -171,7 +171,7 @@ export interface Mission {
 // project 
 
 export const missions: Mission[] = [
-  {
+  /*{
     id: "HorizonX Playr",
     title: "HorizonX Playr",
     subtitle: "GTA V Roleplay, GTA V Online Testing & Mobile Game Testing",
@@ -190,7 +190,7 @@ export const missions: Mission[] = [
       "Proficient in the Microsoft Office suite Apps (e.g., Word, PowerPoint, Excel) for testing documentations and artifacts.", 
       "Collaborated with to developers and designers to improve stability, balance, and overall user experience and related issues.", 
       "Managed various gaming and server updates relates testing, estimated QA efforts and prioritization of test execution.",
-    ],
+    ], 
     testingScope: [
       "Misson Flow",
       "Server Economy",
@@ -209,7 +209,7 @@ export const missions: Mission[] = [
       "Player crashes when attempting a wrong hack in the mini-game on the GTA 5 RP server.",
     ],
     tools: ["Trello","JIRA","TestRail","txAdmin","Dolu","OBS Studio","Discord"],
-  },
+  },*/
 {
     id: "fortnite",
     title: "FORTNITE",
