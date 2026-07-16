@@ -171,7 +171,7 @@ export interface Mission {
 // project 
 
 export const missions: Mission[] = [
-  /*{
+  {
     id: "HorizonX Playr",
     title: "HorizonX Playr",
     subtitle: "GTA V Roleplay, GTA V Online Testing & Mobile Game Testing",
@@ -209,7 +209,7 @@ export const missions: Mission[] = [
       "Player crashes when attempting a wrong hack in the mini-game on the GTA 5 RP server.",
     ],
     tools: ["Trello","JIRA","TestRail","txAdmin","Dolu","OBS Studio","Discord"],
-  },*/
+  },
 {
     id: "fortnite",
     title: "FORTNITE",
